@@ -1,0 +1,40 @@
+{
+  "name": "automation-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:e2e": "playwright test --project=guest-* --project=chromium --project=firefox --project=webkit",
+    "test:smoke": "playwright test --project=guest-chromium --project=chromium --grep @smoke",
+    "test:login": "playwright test src/modules/auth/tests/guest/login.spec.ts",
+    "test:contracts": "playwright test --project=contracts",
+    "test:headed": "playwright test --project=guest-chromium --project=chromium --headed",
+    "test:ui": "playwright test --ui",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "report": "playwright show-report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChndnSnghGen/Automation-Testing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ChndnSnghGen/Automation-Testing/issues"
+  },
+  "homepage": "https://github.com/ChndnSnghGen/Automation-Testing#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^26.6.5",
+    "dotenv": "^18.0.9",
+    "eslint": "^10.13.0",
+    "eslint-plugin-playwright": "^2.12.1",
+    "typescript": "~6.0.0",
+    "typescript-eslint": "^8.72.1"
+  }
+}
